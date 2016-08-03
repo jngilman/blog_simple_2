@@ -1,1 +1,16 @@
-new.html.erb
+<h1>new post</h1>
+
+<%= form_for @post do |f| %>
+	<p>
+	<%= f.label :title %>
+	<%= f.text_area :title %>
+	</p>
+	<br>
+	<p>
+	<%= f.label :content %>
+	<%= f.text_area :content %>
+	</p>
+	<%= f.submit %>
+<% end %>
+<br>
+<%= link_to "All Post", posts_index_path %>
